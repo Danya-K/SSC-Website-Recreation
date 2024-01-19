@@ -1,0 +1,635 @@
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color for the body */
+body {
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
+}
+
+/*Styling the top navigation*/
+.top-navigation {
+    display: flex;
+    background-color: white;
+}
+
+/*placing the search image to the right position*/
+.search-image {
+    position: relative;
+    left: 68vw;
+    top: 3vh;
+}
+
+/*Placing and styling the language option to it's right position and property*/
+.language {
+    position: relative;
+    left: 69vw;
+    top: 5vh;
+    font-size: 12px;
+    border-left: solid grey 1px; 
+    width: 3vw;
+    height: 3vh;
+    padding-left: 1vw;
+    padding-top: 1vh;
+    color: grey;
+    text-decoration: none;
+}
+
+/*Styling the hover effect of the button*/
+.language:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/*Styling the navigation under topnav*/
+.main-navigation {
+    background-color: rgba(0, 0, 139, 0.769);
+    list-style: none;
+    display: flex; 
+    height: 10vh; 
+    align-items: center; 
+    padding-left: 5vw;
+  }
+  
+  /*Styling the list*/
+  .main-navigation li {
+    margin-right: 2vw; 
+    font-size: 16px;
+  }
+  
+  /*Styling the links*/
+  .main-navigation a {
+    text-decoration: none;
+    color: white;
+    position: relative; 
+  }
+  
+  /*I didn't know how to do the hover over effect so I used ChatGPT to help me with that*/
+  /* Create a pseudo-element for the hover effect */
+  .main-navigation a::before {
+    content: '';
+    position: absolute;
+    top: -25px; /* Adjust the top value to extend the box upward */
+    right: -10px; /* Adjust the right value to extend the box to the right */
+    bottom: -25px; /* Adjust the bottom value to extend the box downward */
+    left: -10px; /* Adjust the left value to extend the box to the left */
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.3s; /* Smooth transition for opacity */
+    z-index: -1; /* Place the pseudo-element behind the text */
+  }
+  
+  .main-navigation li:hover a::before {
+    opacity: 1; /* Show the pseudo-element on hover */
+    z-index: -2; /* Move the pseudo-element below the text on hover */
+  }
+
+/*Styling the Hero image*/
+.hero-image {
+    width: 98.9vw;
+    height: 60vh;
+}
+
+/*Styling the Home button with position and looks*/
+.home-link {
+    position: absolute;
+    left: 8.5vw;
+    top: 30vh;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+/*Assigning hover over effect for the Home button*/
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/*Styling the box for the header and box with links*/
+.hero-box {
+    position: absolute;
+    top: 40vh;
+    height: 23vh;
+    width: 92.9vw;
+    background-color: rgba(0, 0, 95, 0.731);
+    color: white;
+    padding-left: 6vw;
+    padding-top: 15vh;
+}
+
+
+/*Font size for the headline*/
+.hl-hero {
+    font-size: 18px;
+}
+
+/*Font size for the text under headline*/
+.p-hero {
+    font-size: 50px;
+}
+
+/*Styling the box with the links inside of it*/
+.direct-links {
+    margin-left: 60vw;
+    margin-top: -26vh;
+    width: 23vw;
+    height: 33.6vh;
+    background-color: rgb(51, 58, 124);
+    text-align: left;
+    padding: 1vw;
+    color: white;
+}
+
+/*For the next 3 classes I style the boxes around the linked text and the text itself*/
+.list-item1 {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    border: 3px solid rgb(255, 255, 255);
+    width: 20vw;
+    height: 5vh;
+    padding-left: 1vw;
+    padding-top: 3vh;
+}
+
+.list-item2 {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    border: 3px solid rgb(255, 255, 255);
+    width: 13vw;
+    height: 5vh;
+    padding-left: 1vw;
+    padding-top: 3vh;
+    margin-top: 2vh;
+}
+
+.list-item3 {
+    text-decoration: none;
+    color: white;
+    list-style: none;
+    border: 3px solid rgb(255, 255, 255);
+    width: 18vw;
+    height: 5vh;
+    padding-left: 1vw;
+    padding-top: 3vh;
+    margin-top: 2vh;
+}
+
+/*With this three hover effects I assign the same effect for the previous three classes*/
+.list-item1:hover {
+    text-decoration: underline;
+}
+
+.list-item2:hover {
+    text-decoration: underline;
+}
+
+.list-item3:hover {
+    text-decoration: underline;
+}
+
+/* Remove text decoration for all links */
+a {
+    text-decoration: none;
+  }
+  
+/*New Grid version of the "Latest News" section*/
+#grid{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(8,minmax(90px,auto));
+  background-color: rgb(255, 255, 255);
+}
+
+#grid img{
+  width: 80px;
+  height: 100;
+}
+
+#headlinetext{
+  grid-column: 2/5;
+  grid-row: 1/2;
+}
+
+#headline{
+  font-size: 2rem;
+  font-weight: bold;
+  /* margin-left: 8vw; */
+  margin-top: 9vh;
+
+}
+
+#img1inbox{
+  padding: 5px;
+  background-color: blue;
+  grid-column: 2/5;
+  grid-row: 4/6;
+  margin-block: 1px;
+  margin-top: -18vh;
+  margin-bottom: 6vh;
+  margin-right: 6vh;
+  background-image: url("../images/banner.jpg");
+  background-size: 453px;
+}
+
+#img2inbox{
+  padding: 5px;
+  grid-column: 5/8;
+  grid-row: 4/6;
+  background-color: rgb(7, 7, 247);
+  margin-block: 1px;
+  margin-top: -18vh;
+  margin-bottom: 6vh;
+  margin-left: -1vw;
+  margin-right: 8vh;
+  background-image: url("../images/banner1.jpg");
+  background-size: 453px;
+
+}
+
+#belowbox1{
+  grid-column: 2/4;
+  grid-row: 6;
+  margin-right: -1vw;
+  margin-top: -3vh;
+}
+
+#belowbox1 h1{
+  font-size: 1.6rem;
+  margin-bottom: 2vh;
+}
+
+#belowbox1 h2{
+  font-size: 1.1rem;
+  margin-bottom:1vh;
+  color: grey;
+}
+
+#belowbox1 p{
+  font-size: 1.1rem;
+  color: grey;
+  margin-bottom: 5vh;
+}
+
+#belowbox1 a{
+  color: black;
+  text-decoration: none;
+}
+
+#belowbox2{
+  grid-column: 5/8;
+  grid-row: 6;
+  margin-right: 3vw;
+  margin-top: -3vh;
+}
+
+#belowbox2 h1{
+  font-size: 1.6rem;
+  margin-bottom: 2vh;
+}
+
+#belowbox2 h2{
+  font-size: 1.1rem;
+  margin-bottom:1vh;
+  color: grey;
+}
+
+#belowbox2 p{
+  font-size: 1.1rem;
+  color: grey;
+  margin-bottom: 3vh;
+}
+
+#belowbox2 a{
+  color: black;
+  text-decoration: none;
+}
+/* Below you can find the section of news to the right from the main news */
+
+#newsover{
+  grid-column: 9/11;
+  grid-row: 1/2;
+}
+
+#newsover h2{
+  font-size: 14px;
+  color: rgb(0, 0, 152);
+  margin-top: 11vh;
+  margin-left: 5vw;
+}
+
+#morenews{
+  grid-column: 8/10;
+  grid-row: 3;
+  margin-top: -8vh;
+}
+
+#morenews h1{
+  font-size: 1.6rem;
+}
+
+#morenewsimg{
+  grid-column: 8/11;
+  grid-row: 3;
+  margin-bottom: -7vh;
+  margin-top: -2vh;
+}
+
+#morenews1{
+  grid-column: 9/10;
+  grid-row: 3;
+  margin-left: -4vw;
+  margin-right: -5vw;
+}
+
+#morenews1 a{
+  color: black;
+  text-decoration: none;
+}
+
+#morenews1 h2{
+  font-size: 1.35rem;
+}
+
+#morenews1 h1{
+  font-size: 0.9rem;
+  color: grey;
+  margin-top: 1vh;
+}
+
+#morenews2img{
+  grid-column: 8/11;
+  grid-row: 4;
+  margin-top: 3vh;
+  margin-bottom: -3vh;
+}
+
+#morenews2{
+  grid-column: 9/11;
+  grid-row: 4;
+  margin-left: -4vw;
+  margin-top: 5vh;
+}
+
+#morenews2 a{
+  color: black;
+  text-decoration: none;
+}
+
+#morenews2 h2{
+  font-size: 1.35rem;
+}
+
+#morenews2 h1{
+  font-size: 0.9rem;
+  color: grey;
+  margin-top: 1vh;
+}
+
+#morenews3img{
+  grid-column: 8/11;
+  grid-row: 6;
+  margin-top: -3vh;
+}
+
+#morenews3{
+  grid-column: 9/11;
+  grid-row: 6;
+  margin-left: -4vw;
+  margin-top: -1vh;
+}
+
+#morenews3 a{
+  color: black;
+  text-decoration: none;
+}
+
+#morenews3 h2{
+  font-size: 1.35rem;
+}
+
+#morenews3 h1{
+  font-size: 0.9rem;
+  color: grey;
+  margin-top: 1vh;
+}
+
+#morenews4img{
+  grid-column: 8/11;
+  grid-row: 7;
+  margin-top: -13vh;
+}
+
+#morenews4{
+  grid-column: 9/11;
+  grid-row: 7;
+  margin-left: -4vw;
+  margin-top: -11vh;
+}
+
+#morenews4 h2{
+  font-size: 1.35rem;
+}
+
+#morenews4 a{
+  color: black;
+  text-decoration: none;
+}
+
+#morenews4 h1{
+  font-size: 0.9rem;
+  color: grey;
+  margin-top: 1vh;
+}
+
+/*Events section*/
+.events-container {
+  background-color: rgba(32, 7, 90, 0.669);
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.eventboxbox {
+  display: flex;
+}
+
+.event-box {
+  width: 100%; /* Change the width to 100% to make the boxes stack vertically */
+  background-color: white;
+  margin: 10px;
+  text-align: center;
+}
+
+.headlineevents {
+  color: white;
+  font-size: 24px;
+}
+
+.events-container h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+.event-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.event-box h1 {
+  font-size: 20px;
+}
+
+.event-box p {
+  font-size: 14px;
+  color: grey;
+  margin: 3px;
+}
+
+.eventsarrow {
+  margin-left: 20vw; /* Center the arrow horizontally */
+  margin-top: 10px; /* Adjust the margin to separate the arrow from the content */
+}
+
+.bottomlineevents {
+  margin-left: 86vw;
+  margin-top: 8vh;
+}
+
+.bottomlineevents a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+/*Useful links section boxes*/
+.useful-links-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.useful-links-box {
+  width: 23%;
+  background-color: rgb(0, 7, 71);
+  margin: 10px;
+  text-align: center;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.image-container {
+  width: 100%; /* Ensure the container takes the full width of the box */
+  height: 150px; /* Set a fixed height for the image container */
+  overflow: hidden; 
+}
+
+.image-container img {
+  width: 100%; /* Make the image take the full width of the container */
+  height: 100%; /* Make the image take the full height of the container */
+}
+
+.useful-links-inner-box {
+  padding: 10px;
+}
+
+.useful-links-inner-box a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.brochures-link {
+  text-align: center;
+  border: solid white;
+  padding: 15px;
+}
+
+/*People Containers*/
+
+.grey-box {
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+}
+
+.person-container {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+  grid-gap: 20px;
+}
+
+.person-headline {
+  grid-column: 1 / -1;
+}
+
+.person-containers {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.person-containers img {
+  width: 15vw; 
+}
+
+/*Contact Section*/
+
+.contact-section {
+  background-color: darkblue;
+  color: white;
+  line-height: 2em;
+  padding-left: 13vw;
+  padding-top: 5vh;
+}
+
+.contact-section a{
+  text-decoration: underline;
+  color: white;
+}
+
+.social-links li{
+  display: inline;
+  margin-left: 5px;
+}
+
+.social-links {
+  margin-top: 2vh;
+  padding-bottom: 5vh;
+}
+
+/*Footer*/
+
+footer {
+  background-color: black;
+  color: grey;
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links {
+  float: left;
+}
+
+.footer-links li{
+  display: inline;
+  margin-left: 10px;
+}
+
+.footer-image {
+  margin-left: 68vw;
+  margin-top: -12vh;
+}
